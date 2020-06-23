@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- font awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+      <!-- icon awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/index.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Permanent+Marker&family=Rubik&display=swap" rel="stylesheet">
+        
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>AI Memory</title>
+        <style>
+
+
+/* .container img{
+            width: 260px;
+            padding-top: 20px;
+        } */
+        .container .btn{
+            margin: 60px 0 0 50px;
+            padding: 10px 20px;
+        }
+        .button-class{
+            margin-top: 10%;
+        }
+        .button-class button{
+            padding: 12px 25px;
+            border-radius: 50px;
+        }
+        .button-class button:nth-child(2){
+            margin-left: 20px;
+            
+        }
+
+          .log_btn a{
+            text-decoration: none;
+           
+          }
+          .sign_btn a{
+            text-decoration: none;
+          }
+        
+         header{
+           background-color: #00263b;
+         }
+         #get-btn{
+           border-radius: 50px;
+         }
+
+         .information .group{
+            text-align: center;
+            padding: 10px 20px;
+            width: 300px;
+        }
+        .information i{
+            font-size: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 30px;
+            color: white;
+            background-color: #00263b;
+            width: 90px;
+            height: 90px;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 50%;
+        }
+        .information{
+            margin-top: 5%;
+        }
+        .information p{
+          color: darkgray;
+        }
+        .top-content{
+           text-align: center;
+           padding-top: 3%;
+           padding-bottom: 4%;
+        }
+        .top-content h2{
+            padding-bottom: 4%;
+        }
+
+       
+        form button a:hover{
+          color: Black;
+        }
+        nav ul li{
+          padding-right: 20px;          
+        }
+        .brand-logo{
+         margin-left: -8%;
+         margin-top: -5%;
+        }
+
+
+        .what-bot h1{
+          text-align: center;
+        }
+
+        .what-bot p .animated{
+          opacity: 1;
+        }
+
+        </style>
+
+        <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
+
+
+    </head>
+
+    <body>
+
+      <!-- navbar -->
+
+
+                <nav class="navbar navbar-expand-lg fixed-top navbar-dark top-navbar" >
+
+                  <a href="" class="navbar-brand" style="margin-left: 15px; font-size: 2rem;"><img src="./assets/Images/Final_logo.png" alt="Logo" width="180px"></a>
+                  <% if(message){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%=message%>
+                    </div>
+                    <% } %>
+        
+                    <%include('./messages')%>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 50%; padding: 8px; outline: none;">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                          <li class="navbar-item">
+                              <a href="#" class="nav-link text-light " >Home</a>
+                          </li>
+                          <li class="navbar-item">
+                              <a href="#price" class="nav-link">Pricing</a>
+                          </li>   
+                          <li class="navbar-item">
+                            <a href="#service" class="nav-link">Integration</a>
+                        </li>
+                          <li class="navbar-item">
+                              <a href="#contact" class="nav-link">Contact</a>
+                          </li>
+                          <li class="navbar-item">
+                              <a href="#about" class="nav-link" id="about">About us</a>
+                          </li>
+                      </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <!-- console button -->
+              <!-- <button class="btn btn-outline-success my-2 my-sm-0 ml-4 console-btn" type="button">Go to console</button> -->
+              
+              <!-- log in sign up button -->
+                  
+              <a href="/login"><button  class="btn btn-outline-primary log_btn" style="border-right: none;" type="button"> Log In  </button></a>
+                  <a href="/insert"><button class="btn btn-outline-light  sign_btn" style="border-left: none;" type="button">Start &nbsp;<i class="fa fa-arrow-right"></i></button></a>
+
+              
+              </form>
+            </div>
+          </nav>
+
+
+          
+
+      <div class="container-fluid page-holder header align-items-center col-12" style="width: 100%; max-height: 100vh; margin: 0 auto;margin-top: 70px; background-image: linear-gradient(to right, #06354e, #0a5c88 );" >
+        <div class="row header page-holder main-heading">
+            <div class="col-sm-12 col-lg-6 col-md-6 head-tag1 animate__animated animate__slideInLeft" style="margin-top: 8%; margin-left: 4%;" >
+                <h1 style="font-size: 3rem; color: #cf7500;"class="anim-typewriter">We build chatbot for</h1>
+                <h2 style="font-size: 2rem; color: #fff;"> <span class="typing"></span> </h2>
+                <!-- <h5 style="color:#fff; line-height: 2; width: 80%;">We provide better service and experience to our coustomer.</h5> -->
+                <div class="button-class">
+                    <button class="btn btn-outline-primary" type="submit">Get Start</button>
+                    <button class="btn btn-outline-info" type="button">Start the Demo &nbsp;<i class="fa fa-arrow-circle-o-right"></i></button>
+                </div>
+            </div>
+            <div class="col-sm animate__animated animate__slideInRight header-img" style="margin-top: -30px; margin-right: 30px;">
+
+              <img src="../assets/Images/bot3.png" alt="" style="width: 100%; margin-top: 8%;">                          
+  
+            </div>
+        </div>
+        </div>
+
+
+        <div class="container" id="client1" style="margin-bottom: 6%;">
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+          <div class="carousel-inner ">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-3">
+                    <img class="d-block " src="../assets/Images/comp1.jpg" alt="First slide" width="250px">
+                  </div>
+                  <div class="col-3">
+                    <img class="d-block " src="../assets/Images/iimt.png" alt="First slide" width="250px">
+                  </div>
+                
+                </div>              
+            </div>
+
+            <!-- <div class="carousel-item">
+              <div class="row">
+                <div class="col-3">
+                  <img class="d-block " src="../assets/Images/col-logo4.png" alt="First slide">
+                </div>
+                <div class="col-3">
+                  <img class="d-block " src="../assets/Images/services-img1.png" alt="First slide">
+                </div>
+                <div class="col-3">
+                  <img class="d-block " src="../assets/Images/services-img2.png" alt="First slide">
+                </div>
+                <div class="col-3">
+                  <img class="d-block " src="../assets/Images/services-img3.png" alt="First slide">
+                </div>
+              </div>              
+            </div> -->
+           
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+
+
+    
+
+        <!-- What is chatbot? -->
+        <!-- <div class="container-fluid col-12 chatbot what-bot" style="width: 90%;  margin-top: 100px; margin-bottom: 100px; ">          
+          <div class="row header col-12" style="margin-left:0; ">
+              <div class="col-lg-6 col-md-6 col-sm-12 head-tag" style="margin-right : 0; padding-right: 0;">
+                     
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 head-tag">
+                
+                
+                       
+              </div>
+          </div>
+          </div> -->
+
+
+
+          <div class="container-fluid col-12" style="width: 80%;  margin: 8% auto;margin-top: 70px;" >
+            <div class="row">              
+                <div class="col-sm" style="margin-top: 5%;">
+                  <h1 class="head-chat" style="margin-bottom: 6%; font-weight: bold;">What is chatbot?</h1>
+                  <p style="color: rgb(88, 83, 83); font-size :  1.2rem;" >A chatbot is an artificial intelligence (AI) software that can simulate a
+                      conversation (or a chat) with a user in natural language through messaging applications, websites, mobile
+                      apps or through the telephone.
+                      A chatbot is often described as one of the most advanced and promising expressions of interaction between
+                      humans and machines. However, from a technological point of view, a chatbot only represents the natural
+                      evolution of a Question Answering system leveraging Natural Language Processing (NLP).</p>  
+                </div>   
+                <div class="col-sm">                  
+                  <img src="../assets/Images/what-bot2.jpg" alt="chatbot" style="width: 100%; margin-right : 0; padding-right: 0;">
+                </div>           
+            </div>
+          </div>
+
+
+         
+
+          <div class="container-fluid col-12 integration" >
+            <div class="row">
+              <div class="col-sm">                  
+                <img src="../assets/Images/bots.jpg" alt="" style="width: 90%; right: 8%;">
+              </div>
+                <div class="col-sm" style="margin-top: 2%;">
+                  <h1>Integrate ChatBot with your favorite tools</h1>
+                  <h4>Connect the tools you already know and love using one-click integrations. </h4>
+                  <button class="btn btn-outline-dark" type="button">Browse Integration</button>
+                </div>              
+            </div>
+          </div>
+
+ <!-- Our services -->
+
+          <div class="container-fluid service" id="service"> 
+              <div class="row">
+                <div class="col-12" style="text-align: center; color: #fff; ">
+                  <p style="margin-bottom: 0; padding-bottom: 0; color: darkgoldenrod; word-spacing: 0.2em;letter-spacing: 0.07em;">WHAT CAN AI MEMORY DO FOR YOU?</p>
+                  <h1 style="margin-top: 0; padding-top: 0;">Automate core business processes</h1>                  
+                </div>
+              </div>
+         
+
+              <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 70px;" >
+                <div class="row">
+                  <div class="col-sm">                  
+                    <img src="../assets/Images/whatsapp-business2.png" alt="" style="width: 100%; right: 8%;">
+                  </div>
+                    <div class="col-sm head-tag">
+                      <h1>Whatsapp For Business</h1>
+                        <p >Leverage the world’s largest messaging application to hold meaningful conversations with your customers and employees.
+                           From sending business-critical notifications to instantly engaging with leads and prospects, WhatsApp automation can 
+                           mean serious business.
+                          </p>                          
+                          <a href="/whatsappPage"><button class="btn btn-warning" type="button"><b>Learn More</b></button></a>
+                    </div>              
+                </div>
+              </div>
+    
+
+
+              <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 70px;" >
+                
+                <div class="row header page-holdercol-12">
+                    <div class="col-sm head-tag">
+                      <h1>Building Multichannel Conversational Platform</h1>
+                        <p>AI Memory develops high-quality conversational platforms to automate communication
+                           and create personalized customer experiences at scale, through messengers and the web.</p>
+                           <button class="btn btn-warning" type="button"><b>Learn More</b></button>
+                    </div>
+                    <div class="col-sm">
+                      
+                      <img src="../assets/Images/social-icon.png" alt="" style="width: 90%; right: 8%;">
+                    </div>
+                  </div>
+                </div>
+          
+
+                <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 70px;" >
+                
+                  <div class="row header page-holdercol-12">
+                    <div class="col-sm">
+                        
+                      <img src="../assets/Images/customer-support2.png" alt="" style="width: 120%; right: 8%;">
+                    </div>
+               
+                      <div class="col-sm head-tag" style="margin-top: 7%">
+                        <h1>Customer Support</h1>
+                          <p>Drive efficiency, loyalty, and growth at every stage of your customer lifecycle.
+                            Customer support assistants can reduce response time and the time taken to resolve
+                            queries, drastically. And when they can’t, they can seamlessly transfer queries to a human agent.
+                            There’s ~65% of mundane query-answering waiting to be automated.</p>
+                            <button class="btn btn-warning" type="button"><b>Learn More</b></button>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 30px;" >
+                
+                    <div class="row header page-holdercol-12">
+                    
+                 
+                        <div class="col-sm head-tag" style="margin-top: 7%">
+                          <h1>Customer Engagement</h1>
+                            <p>Connect, converse and convert customers, anytime, in any language and grow your enterprise.
+                               With AI-powered virtual assistants, you can capture leads, cross-sell and up-sell, aid product discovery,
+                               launch-smart promotions, schedule reminders and much more. Empower your sales and marketing teams to do more!</p>
+                              <button class="btn btn-warning" type="button"><b>Learn More</b></button>
+                        </div>
+
+                        <div class="col-sm">
+                          
+                          <img src="../assets/Images/engaement1.png" alt="" style="width: 90%; right: 8%;">
+                        </div>
+  
+                      </div>
+                    </div>
+
+
+                    <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 30px;" >
+                
+                      <div class="row header page-holdercol-12">     
+                        <div class="col-sm">
+                            
+                          <img src="../assets/Images/employee-engagement2.png" alt="ChatBot" style="width: 120%; right: 8%; margin-top: 4%;">
+                        </div>                                    
+                          <div class="col-sm head-tag" style="margin-top: 7%">
+                            <h1>Employee Engagement</h1>
+                              <p>Automate 60% of HR processes with the world’s only cognitive engagement cloud, capable of delivering
+                                 sophisticated experiences that feel authentically human. Adopt a new and better way to onboard,
+                                  engage and retain employees.</p>
+                                <button class="btn btn-warning" type="button"><b>Learn More</b></button>
+                          </div>
+  
+                          
+    
+                        </div>
+                      </div>
+
+
+                <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 70px;" >
+                
+                  <div class="row header page-holdercol-12">
+                    <div class="col-sm">
+                        
+                      <img src="../assets/Images/services-img4.png" alt="" style="width: 90%; right: 8%;">
+                    </div>
+                      <div class="col-sm head-tag" style="margin-top:3%">
+                        <h1>BUSINESS PROCESS AUTOMATION</h1>
+                       
+                          <p>We optimize and automate human work. Its digital work transformation reduces service quality,
+                             improve service delivery or contain costs. We deliver cutting-edge products and excellence in customer service.</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
+                  <div class="container-fluid col-12 chatbot" style="width: 80%;  margin: 0 auto;margin-top: 70px;" >
+                    <div class="row">
+                      <div class="col-sm">                  
+                        <img src="../assets/Images/back5.png" alt="" style="width: 90%; right: 8%;">
+                      </div>
+                        <div class="col-sm head-tag" style="margin-top:3%">
+                          <h1>CONVERSATION DESIGN</h1>
+                            <p >We design language on a conversational platform similar to human conversation.
+                               Personality building is our main goal to create a maximum valuable chatbot for your business.</p>
+                        </div>              
+                    </div>
+                  </div>
+  
+               
+          </div>   <!--Services finished-->
+
+          <!-- Why us? -->
+          <div id="our-services" class="our-services">
+                <h3 class="text-green mb-5 h1 text-center" style="margin: auto 5%;">Why us?</h3>
+                
+                <!-- Features -->
+
+              <div class="container information">
+                      <div class="row justify-content-center service-row" style="margin-left: 0; margin-right: 0px;">
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-handshake-o"></i>
+                                  <h5>AI + Human</h5>
+                                  <p>You deal with Hot Leads, let AI handle the rest</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-clock-o"></i>
+                                  <h5>24x7 Sales Rep</h5>
+                                  <p>Talk to your website visitors 24x7 even when your agents are sleeping</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-comments-o "></i>
+                                  <h5>Automated FAQ answers</h5>
+                                  <p>Let AI answer repeated queries from prospects</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-bell-o "></i>
+                                  <h5>Fast Notification</h5>
+                                  <p>Get fast Notification of user queries or anything else</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-code-fork "></i>
+                                  <h5>Completly Build Bot</h5>
+                                  <p>Noneed to integrate by your self. We are providing complete chatbot.</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                              <div class="group">
+                                  <i class="fa fa-bar-chart "></i>
+                                  <h5>Automated FAQ answers</h5>
+                                  <p>Let AI answer repeated queries from prospects</p>
+                              </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6">
+                            <div class="group">
+                                <i class="fas fa-user-check pt-3"></i>
+                                <h5>Free trail</h5>
+                                <p>Let AI answer repeated queries from prospects</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="group">
+                              <i class="fas fa-infinity pt-3"></i>
+                                <h5>Unlimited Services</h5>
+                                <p>Noneed to integrate by your self. We are providing complete chatbot.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="group">
+                                <i class="fa fa-inr"></i>
+                                <h5>Budget Plans</h5>
+                                <p>Let AI answer repeated queries from prospects</p>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+
+
+
+            <!-- / pricing -->
+            <section class="pricing py-5" id="price">
+              <div class="container">
+                <div class="row">  
+                  <div class="price-header text-light">
+                    <h1>Prices</h1>
+                    <p>Choose a subcription to your business now.</p>
+                  </div> 
+                </div>
+                <div class="row">                  
+                  <!-- Free Tier -->
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                        <h6 class="card-price text-center">&#x20B9 0<span class="period">/month</span></h6>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited chats</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Users</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Available for 10 days</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>20 Stories </li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Pre trained smalltalk bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Instant Integration of pre trained bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dashboard</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>unlimited customer support</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>unlimited storage</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>unlimited chatbot customization</li>         
+                        </ul>
+
+                        <button class="btn btn--primary btn-block getStart" type="button" style="margin: 0 auto;"><a href="/demoForm" style="text-decoration: none;"> Use </a></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Plus Tier -->
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                        <h6 class="card-price text-center">&#x20B9 5999<span class="period">/month</span></h6>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li class="bot-quantity"><span class="fa-li"><i class="fas fa-check"></i></span>1 chatbot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Users</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Available for 1 month</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>2000 Stories </li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Pre trained smalltalk bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Instant Integration of pre trained bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dashboard</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited customer support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited chatbot customization</li>
+                        </ul>
+
+                          <a href="/paymentPage?quantity=1&price=5999" style="text-decoration: none;"><button class="btn btn-primary btn-block getStart" style="margin: 0 auto;" type="button">Get Started</button></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pro Tier -->
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                        <h6 class="card-price text-center">&#x20B9 8999<span class="period">/month</span></h6>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li class="bot-quantity"><span class="fa-li"><i class="fas fa-check"></i></span>3 chatbot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Users</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Available for 1 month</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited Stories </li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Pre trained smalltalk bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Instant Integration of pre trained bot</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dashboard</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited customer support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>unlimited chatbot customization</li>
+                        </ul>
+                        <!--buy is replaced here-->
+                          <a href="/paymentPage?quantity=3&price=8999" style="text-decoration: none;"><button class="btn btn-primary btn-block getStart" style="margin: 0 auto;" type="button">Get Started</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><br />
+          
+
+          <!-- contact us -->
+          <section id="contact" class="contact">
+            <div class="container">
+      
+              <div class="section-title aos-init aos-animate" data-aos="fade-up">
+                <h1>Contact</h1>
+                <br />
+              </div>
+      
+              <div class="row">
+      
+                <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+                  <div class="info">
+                    <div class="address">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <h4>Location:</h4>
+                      <p>Huda city center</p>
+                    </div>
+      
+                    <div class="email">
+                      <i class="fas fa-envelope-square"></i>
+                      <h4>Email:</h4>
+                      <p>aimemory@gmail.com</p>
+                    </div>
+      
+                    <div class="phone">
+                      <i class="fas fa-phone"></i>
+                      <h4>Call:</h4>
+                      <p>+919690574262</p>
+                    </div>
+      
+                  </div>
+      
+                </div>
+      
+                <div class="col-lg-8 mt-5 mt-lg-0 aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+      
+                  <form method="post" action="/sendMessage" role="form" class="php-email-form">
+                    <div class="form-row">
+                      <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                        <div class="validate"></div>
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                        <div class="validate"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                      <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                      <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                  </form>
+      
+                </div>
+      
+              </div>
+      
+            </div>
+          </section><br />
+
+          <!-- chat bot frame -->
+          <div class="chat-container" id="chat-container">
+        
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light bot_header">
+                <a class="navbar-brand mute">Iris</a>
+            </nav>
+    
+            <iframe src="/ourBotChat"></iframe>
+        </div>
+        
+        <button id="mainBtn" onclick="open_chatbot()" class="btn btn-primary shadow-none bg-primary">
+          
+            <i class="fas fa-robot"></i></i>
+               
+        </button>
+
+
+
+      
+
+        <!-- Join Us -->
+
+        <div class="container-fluid join">        
+          <div class="row" >
+            <div class="col-12">
+              <img src="../assets/Images/boy3.png" alt="Boy image" width="250px" style="margin-top: -50px;">
+            </div>
+            <div class="col-12 join-content">
+              <h5>Join AIMemory Company team</h5>
+              <p>Get your first chatbot at only 5999 Rs. </p>
+              <button class="btn btn-primary" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+
+
+          <!-- footer -->
+          <footer id="sticky-footer" class="footer-section bg-dark text-white-50">
+            <div class="container">
+
+              <div class="row" >
+                <div class="container social-container" style="margin-top: 3%;">
+                  <div class="row justify-content-center">
+                    <h2>Create once and deploy on any of the platforms below</h2>
+                  </div>
+                    <div class="row justify-content-center" style="margin-bottom: 2%;">
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/viber-icon.png" alt="Viber chatbot">
+                      <h6>Viber</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/whatsapp-icon.png" alt="Viber chatbot">
+                      <h6>Whatsapp</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/fb.png" alt="Viber chatbot">
+                      <h6>Messenger</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/twitter-icon.png" alt="Viber chatbot">
+                      <h6>Twitter</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/education.png" alt="Viber chatbot">
+                      <h6>Website</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/telegram-icon.png" alt="Viber chatbot">
+                      <h6>Telgram</h6>
+                    </div>
+                    <div class="icon-container">
+                      <img src="../assets/Images/Icons/slack-icon.png" alt="Viber chatbot">
+                      <h6>Slack</h5>
+                    </div>
+                  </div>
+                  <p>It's time to make it work for you</p> 
+                  <div class="row justify-content-center">  
+                                                         
+                    <button class="btn btn-danger" style="margin: 0 auto;">GET STARTED FREE</button>
+                  </div>
+
+                </div>
+              </div>
+
+          
+              <div class="row" >
+
+                <!-- Company  Logo -->
+
+                <div class="col-lg-3" >
+                <nav class="navbar  navbar-dark" style="margin: 50px auto 0;">                  
+                  <a href="" class="navbar-brand brand-logo"><img src="./assets/Images/Final_logo.png" alt="Logo" width="250px"></a>
+                  </nav>
+                </div>
+
+
+
+                <!-- Menu -->
+
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <nav class="navbar navbar-dark">                    
+                        <ul class="navbar-nav">
+                          <h5>Menu</h5>
+                            <li class="navbar-item">
+                                <a href="" class="nav-link">Home</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="nav-link">Pricing</a>
+                            </li>   
+                            <li class="navbar-item">
+                                <a href="" class="nav-link">Contact</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="nav-link">About us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                  </div>  
+
+
+
+                  <!-- contact -->
+                  
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <nav class="navbar  navbar-dark">
+                    
+                        <ul class="navbar-nav">
+                          <h5>Contact</h5>
+
+                            <li class="navbar-item">
+                              <p style="margin :20px 0 0; padding-bottom: 0; line-height: .6;">+9196905742062</p>
+                                <a href="" class="nav-link">chatbot@aimemory.bot</a>
+                            </li>
+                            <li class="navbar-item">
+                              <p style="margin :20px 0 0; padding-bottom: 0; line-height: .6;">+9196905742062</p>
+                                <a href="" class="nav-link">chatbot@aimemory.bot</a>
+                            </li>  
+                          
+                         
+                        </ul>
+                    </nav>
+                  </div>  
+
+
+
+
+                  <!-- Social media icon -->
+                  
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <nav class="navbar  navbar-dark social">
+                        <ul class="navbar-nav">
+                          <h5>Social</h5>
+                            <li class="navbar-item">
+                                <a href="" class="nav-link"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="navbar-item">
+                              <a href="" class="nav-link"><i class="fa fa-instagram"></i></a>
+                            </li>   
+                            <li class="navbar-item">
+                              <a href="" class="nav-link"><i class="fa fa-linkedin"></i></a>
+                            </li>                        
+                        </ul>
+                    </nav>
+                  </div>  
+
+
+              </div>
+            </div>
+
+
+
+            <div class="container text-center">
+              <small>Copyright &copy; AI Memory Company</small>
+            </div>
+          </footer>
+         
+
+          
+        <!-- JQuery Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+          <!-- Typing Animation -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+
+
+          <script>
+                var typed =new Typed('.typing', {
+                strings: ["Whatsapp...", "Facebook Messenger", "Website..."],
+                typeSpeed : 100,
+                backSpeed : 100,
+                backDelay : 1000,
+                startDelay : 1000,
+                loop : true
+            });
+
+          </script>
+
+          <script> 
+            function open_chatbot() {
+              var chat_container = document.getElementById("chat-container");
+              var main_button = document.getElementById("mainBtn");
+              if (chat_container.style.display === "none") {
+                  chat_container.style.display = "block";
+                  main_button.innerHTML = '<i class="fas fa-times" style="font-size : 26px;padding: 6px 9px; "></i> ';
+              } else {
+                  chat_container.style.display = "none";  
+                  main_button.innerHTML = '<i class="fas fa-robot" style="font-size : 30px padding: 8px 12px; "></i>'
+              }
+              }
+          </script>
+
+          <script>              
+                $(document).ready(function(){
+                  $('.head-chat').waypoint(function(direction){
+                    $('.what-bot').addClass('animated zoomIn');
+                  })
+                });
+          </script>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="./public/paymentButtons.js" type="text/javascript"></script>
+      <script src="./public/chatDataProcessing" type="text/javascript"></script>
+      <script src="./public/demoMaintain.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<%- include ("partial/portalHeader.ejs") %>
+
+<div class="container my-5">
+    <% if (message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+    <% } %>
+    <h1 class="display-4 text-center">Basic Information</h1>
+    <p class="lead text-center mb-5">You can change your info from here</p>
+    <form method="post" action="/updateProfile">
+        <fieldset disabled="disabled" id="fieldset">
+            <div class="form-group row justify-content-around">
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 my-3">First Name</label>
+                    <input class="Pinput_form form-control" id="first_name" name="first_name" placeholder="First Name"
+                           type="text" value=<%- user_data.name %>>
+                </div>
+
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 my-3">Last Name</label>
+                    <input class="Pinput_form form-control" id="last_name" name="last_name" placeholder="Last Name"
+                           type="text" value=<%- user_data.last %>>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-around">
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 my-3">Phone</label>
+                    <input class="Pinput_form form-control" id="phone" name="phone"
+                           placeholder="Enter your phone number" type="tel" pattern="^\d{10}"
+                           title="Please enter a vaild phone number" value=<%- user_data.phone %>>
+                </div>
+
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 my-3">Email</label>
+                    <input class="Pinput_form form-control" id="email" name="email" placeholder="Email Address"
+                           type="text" name="email" aria-describedby="emailHelp" value=<%- user_data.email %> required>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-around">
+                <div class="col-12 col-sm-4">
+                    <input class="Pinput_form my-3 my-sm-5 form-control" placeholder="New Password" type="password"
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                           title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                           autocomplete="off">
+                </div>
+
+                <div class="col-12 col-sm-4">
+                    <input class="Pinput_form my-3 my-sm-5 form-control" id="ConfirmPassword" name="ConfirmPassword"
+                           placeholder="Confirm Password" type="password">
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-around">
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 mt-5 mt-sm-5">Company Name</label>
+                    <input class="Pinput_form mb-3 mb-sm-3 form-control" id="website" name="website"
+                           placeholder="Enter your company Name" type="text">
+                </div>
+
+                <div class="col-12 col-sm-4">
+                    <label class="lead mx-1 mt-5 mt-sm-5">Url</label>
+                    <input class="Pinput_form my-3 mb-sm-3 form-control" id="webUrl" name="webUrl"
+                           placeholder="Website URL" type="text">
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-around">
+                <div class="col-10">
+                    <label class="lead mx-1 ">Address</label>
+                    <textarea class="mb-sm-3 form-control Paddress_area" type="text" id="publicinfo" name="publicinfo"
+                              cols="40" rows="4" placeholder="Company Address">
+                        <% if(iframeData) { %>
+                            <% if(user_data.isBuy) { %>
+                                Subscription Bots
+                            <% } else if(user_data.isDemo){%>
+                                    Demo Bots
+                                <% } %>
+                            <% for(pid in iframeData) {%>
+                                <iframe src="http://localhost:8080/bot?Cid=<%=user_data.company_id%>&Pid=<%= iframeData[pid]%>"></iframe>
+                            <% } %>
+                        <% } %>
+                    </textarea>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row justify-content-around">
+            <div class="row">
+                <button type="button" class="btn btn-outline-secondary mr-1" onclick="editProfile()">&nbsp Edit Profile
+                    &nbsp
+                </button>
+                <button name="submit" type="submit" id="submit" class="ml-1 btn btn-outline-secondary" disabled>Update
+                    Profile
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function editProfile() {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("fieldset").disabled = false;
+    }
+</script>
+
+<%- include ("partial/portalFooter.ejs") %>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- font awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+    <!-- icon awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Numans&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./assets/paymentStyle.css">
+    <title>Ai Memory</title>
+    <script src = "https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-light bg-primary" style="height: 100px">
+
+</nav>
+
+<form action="http://0b2f7227.ngrok.io/success" id="pay" method="POST">
+    <script  src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_1VGUCx5bA5SiGQ"
+                    data-buttontext = ""
+             id="scr"></script>
+    <input type="hidden" custom="Hidden Element" name="hidden">
+</form>
+
+
+
+<!-- payment
+<p class="text-center py-3"><button id="subscription" class="btn btn-primary"
+                                    style="background-color: #4abba9 !important;"
+    >
+        ChatBot Subscription</button></p>-->
+
+<div class=" paymentForm container-fluid shadow bg-white rounded">
+
+
+    <div class="row" id="payment-block">
+
+        <% if(price) { %>
+        <div class="col-sm">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" value=<%=email%> aria-describedby="emailHelp" readonly>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Phone No.</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" value=<%= phone%> readonly>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button class="btn btn-primary" id="subscription" type="button">Payment</button>
+            </form>
+
+
+        </div>
+
+        <div class="col-sm">
+
+            <ul class="list-group">
+                <li class="list-group-item lists "><h6 class="my-0"> ChatBots Price </h6>
+                    <small class="text-muted smalls"> <%=quantity%> Bots </small>
+                    <span>&#8377; <%=price%>.00</span>
+                </li>
+
+                <li class="list-group-item lists "><h6 class="my-0"> GST 0.2% </h6><span>&#8377; 78.00</span></li>
+                <li class="list-group-item lists "><h6 class="my-0"> Other services 2.5% </h6><span>&#8377; 435</span>
+                </li>
+                <li class="list-group-item lists "><h6 class="my-0"> Total (INR) </h6> <span>&#8377; <%= price%>.00</span>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="./public/payment.js" type="text/javascript"></script>
+
+</body>
+
+
+</html>

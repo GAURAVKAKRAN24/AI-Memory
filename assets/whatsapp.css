@@ -1,0 +1,275 @@
+body{
+   
+    width: auto;
+}
+
+.button-class{
+    margin-top: 10%;
+}
+.button-class button{
+    padding: 12px 16px;   
+}
+.button-class button:nth-child(2){
+    margin-left: 10px;
+}
+
+  .log_btn a{
+    text-decoration: none;
+   
+  }
+  .sign_btn a{
+    text-decoration: none;
+  }
+
+ header{
+   background-color: #00263b;
+ }
+ #get-btn{
+   border-radius: 50px;
+ }
+ 
+
+.header-img{
+    margin:  0;  
+}
+
+.main-heading{
+    padding :0 5%;
+}
+
+.header-img img{
+   margin-top: 22.5%;   
+   margin-bottom: 4%;
+}
+
+@media (max-width : 500px){
+    .header-img img{
+        margin: 10% 0;
+        padding: 0;
+    }
+
+    .page-holder{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header .head-tag1 {
+        padding : auto 0;
+        margin: auto 0;        
+    }
+
+    .head-tag1 h1{
+        text-align: center;
+        padding : auto 0;
+        margin: 4% 0 10%;
+        font-size: 2.9rem;
+    }
+    .head-tag1 h2{
+        text-align: center;
+        padding : auto 0;
+        margin: 8% 0 10%;
+        
+    }
+    .button-class{
+        text-align: center;
+    }
+    .button-class .btn{
+        padding:16px 20px;
+    }
+}
+
+.page-holder {
+min-height: 90vh;
+width: 100%; 
+margin: 0 auto;
+margin-top: 70px; 
+background-image: linear-gradient(to right, #06354e, #0a5c88);
+}
+
+.top-navbar {
+background-image: linear-gradient(to right, #06354e, #0a5c88 ) !important;
+}
+
+.bg-cover {
+background-size: cover !important;
+}
+
+.top-navbar .nav-item, .navbar-brand {
+margin: 0px 20px;
+color: #6C757D;
+}
+
+#sticky-footer li{
+margin: 0 auto;
+}
+
+
+#sticky-footer{
+padding: 5px 0 20px;
+}
+
+#sticky-footer h5{
+color: #eee;
+}
+
+#sticky-footer a{
+font-size: 15px;
+}
+.social{
+font-size: 23px;
+}
+.fa-facebook{
+background-color: #eee;
+color: #4d4e53;
+padding:10px 15px;
+border-radius: 50%;
+font-weight: bold;
+font-size: 23px;
+}
+.fa-facebook:hover{
+color: #3168df;
+}
+
+.fa-instagram{
+background-color: #eee;
+color: #4d4e53;
+padding:10px 12px;
+border-radius: 50%;
+font-weight: bold;
+font-size: 23px;
+}
+.fa-instagram:hover{
+color: #c41b4a;
+}
+
+.fa-linkedin{
+background-color: #eee;
+color: #4d4e53;
+padding:10px 12px;
+border-radius: 50%;
+font-weight: bold;
+font-size: 23px;
+}
+.fa-linkedin:hover{
+color: #1353dd;
+}
+
+nav ul li{
+  padding-right: 20px;          
+}
+
+
+/* Cards */
+.cards-container{
+    margin:8% 0;
+}
+
+.cards-container .card{
+    border: none;
+    
+}
+.card-col{
+    margin: 0 auto;
+    text-align: center;    
+    margin:auto 0%;
+}
+.card{
+   
+    padding:8% 5%;   
+}
+.card h4{
+    font-weight: bold;
+}
+.card img{
+    width: 150px;
+    margin: 0 auto;
+}
+
+.why-use-row{
+    margin: 5% 0;
+    text-align: center;
+    padding: 2%;    
+}
+
+.why-use-row h2{
+    margin-bottom: 20px;
+}
+
+.support .img-container{
+    width: 95px;
+    height: 95px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 26px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.16);
+    text-align: center;
+}
+
+.img-container img{
+    border: 0;
+    width: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.support .row{
+    margin-bottom: 2%;
+    padding:1% 5%;
+    text-align: center;
+}
+
+.support h4{
+    width: auto;
+    padding-top: 15px;
+    color: #616161;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.social-container{
+    padding-top: 26px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.19), 1px 1px 3px 0 #000;
+    text-align: center;
+    color: black;
+    margin-bottom: 5%;
+}
+
+.social-container img{
+    width: 50px;
+}
+.social-container .row{
+    padding:0 2%;
+}
+.icon-container{
+    padding: 2.5%;
+    color: darkgray;
+    font-weight: bold;
+}
+.icon-container:hover{
+   color: black;
+   font-weight: bold;
+}
+
+.what-provide{
+    text-align: center; 
+    background-color: blue;
+}
+.why-use{
+    margin: 9% auto;
+    /* text-align: center; */
+    background-color: rgb(245, 245, 245);
+
+}
+.why-use h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+.why-use h2{
+    font-weight: bold;
+}
+

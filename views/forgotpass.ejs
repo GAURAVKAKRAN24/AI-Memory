@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>User Portal</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/portal.css">
+
+     <!-- font awesome -->
+     <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <style>
+        .justify-content-center{
+            
+            text-align: center;
+        }
+        .card{
+            padding: 8% 5%;
+            margin-top: 21%;
+        }
+        .input-group{
+          margin-bottom: 8%;
+        }
+        .display-4{
+            font-size: 2.5rem;
+        }
+        .card-title img{
+            margin: 2% 0% 5%;
+        }
+    </style>
+
+</head>
+<body>
+ <div class="container" >
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6" style="padding: 0 6%;">
+            <div class="card">
+                <div class="card-title">
+                    <img src="../assets/Images/Icons/forgot_pass.png" alt="chatbot" width="100px" class="rounded-circle">
+                    <h2 class="display-4">Forgot Password?</h2>
+                    <p>Don't worry just feel free fill your email and we'll help you reset your password.</p>
+                </div>
+                <div class="card-body">
+                       
+                    <form action="/forgot-pass" method="post">
+                        <div class="form-group">
+                            <div class="input-group" style=" width: 80%; margin: 5% auto;">
+                                <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope-open-text"></i></div>
+                                </div> 
+                            <input  type="email" class="form-control" name="email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div> 
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <button class="btn btn-primary btn-block" type="submit" style=" width: 80%; margin: 5% auto;"> Reset password </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+
+
+</html>

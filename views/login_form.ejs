@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- font awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Login</title>
+
+        <style>
+            body{
+                background-color: #00263b;
+            }
+            .card{
+                text-align: center;
+                padding-top: 0%;
+                padding: 2% 10%;
+                box-shadow: 0px 0px 40px 7px black;
+            }
+            
+            .card-title{
+                font-size: 2rem;
+                font-weight: bold;
+                margin-top: 4%;
+                margin-bottom: 10%;
+            }
+            .form-group .row{
+                margin: 0 auto;
+            }
+            .soical-icon .btn{
+                width:49%;
+                margin-bottom: 15%;
+            }
+            #submit{
+                width: 100%;
+                margin:0 auto;
+            }
+            .input-group{
+                margin-bottom: 5%;
+                
+            }
+            .names input{
+                width: 45%;
+                
+            }
+            .names input:nth-child(2){
+                margin-left: 5%;
+                width: 50%;
+            }
+            .display-5{
+                font-size: 2rem;
+                margin: 4% 0;
+                color: #fff;
+            }
+           
+
+            .register-signUpbtn{
+                margin-bottom: 7%;
+            }
+
+            .back{
+                position: absolute;
+                left: 6%; 
+                top: 6%; 
+                font-size: 1.4rem;
+                border: 1px solid lightblue;
+                padding: 0 8px 3px;
+                border-radius: 50%;
+                transition: .5s;
+                color: white;
+            }
+            .back:hover{
+                background-color: #f7f7f7;
+                font-weight: bold;
+                cursor: pointer;
+                color: black;
+            }
+            form h6{
+                margin: 5% 0; 
+            }
+        </style>
+            
+      </head>
+
+    <body>
+
+
+        <div class="container mt-5 pt-4">
+
+            <% if(message)  {%>
+                    <div class="alert alert-success" role="alert">
+                        <%= message %>
+                    </div>
+
+            <% } %>
+            <div class="row justify-content-center">
+                <a href="/"><span class="back"><strong>←</strong></span></a>
+                        <div class="col-lg-4 col-sm-8" >
+                            <a href="/" style="text-decoration: none;"><h1 class="display-5">GetChat</h1></a>
+                            <div class="card">
+                            <div class="card-title">Login</div>
+                            <form  action="/login" method="post">                            
+                                
+
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope-open-text"></i></div>
+                                            </div>  
+                                            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+                                        </div>                     
+
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
+                                            </div>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                        </div>
+                                        
+                                            <h6 class="text-muted">Or</h6>
+                                         
+                                                        <div class="soical-icon">
+                                                            <button class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</button>
+                                                            <a href="/auth/google"><button class="btn btn-danger" ><i class="fab fa-google"></i> Google</button></a>
+                                                        </div>
+                                                  
+                                            
+                                            <button type="submit" class="btn btn-outline-primary btn-block register-signUpbtn">Log In</button>
+                                            <a class="text-secondary card-link" href="/forgot-pass-form" style=" text-decoration: underline;">forgot password?</a><br>
+                                            <span class="text-secondary card-link" href="">Don't have an account <a href="/insert" style=" text-decoration: underline; color: blue;">SignUp</a></span>
+
+                                </div>
+                            </form>
+                            </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

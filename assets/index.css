@@ -1,0 +1,663 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Numans', sans-serif;
+	scroll-behavior: smooth;
+}
+
+
+.animate__animated h1{
+	font-family: 'Permanent Marker', cursive;
+}
+
+.animate__animated h2{
+	font-family: 'Rubik', sans-serif;
+}
+
+/* chatbot */
+.chatbot-frame {
+	position: fixed;
+	bottom: 80px;
+	margin-right: 20px;
+	display: none;
+	right: 10px;
+	height: 500px;
+	width: 337px;
+	z-index: 10;
+	/* border-style: solid; */
+	/* border-color: #3F51B5; */
+	box-shadow: 0 0 5px #000;
+}
+
+.chatBot-button {
+	background-color: #3F51B5;
+	color: white;
+	border-radius: 0%;
+	position: fixed;
+	bottom: 23px;
+	right: 28px;
+}
+/* chatbot finish */
+
+
+ /* What is chatbot */
+
+
+
+.page-holder {
+	/* min-height: 100vh; */
+	height: 630px;
+}
+
+.top-navbar {
+	background-image: linear-gradient(to right, #06354e, #0a5c88 ) !important;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.top-navbar .nav-item, .navbar-brand {
+	margin: 0px 20px;
+	color: #6C757D;
+}
+
+
+.headline {
+	/* background-color: black; */
+	text-align: center;
+	color: #3963AE;
+	margin: 0px 0px 40px 70px;
+}
+
+.headline button {
+	border-color: #3963AE;
+	color: #3963AE;
+	border-radius: 0%;
+}
+
+.standing-bot {
+	height: 500px;
+	width: 500px;
+}
+
+.custom-about {
+	margin: 40px 0px;
+}
+
+.custom-about display-3 {
+	color: #3963AE;
+}
+
+/* services */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#our-services{
+	padding: 60px 0;
+}
+
+#our-services h3,
+#our-services h5{
+    color: #00263b!important;
+}
+
+
+
+/* .our-services {
+	background-color: #EFF0F7;
+} */
+
+/* pricing */
+section.pricing {
+	background-image: linear-gradient(to bottom right, #244150, #1e6486);
+background-color: #244150;
+  }
+  
+  .pricing .card {
+	border: none;
+	border-radius: 0rem;
+	transition: all 0.2s;
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing hr {
+	margin: 1.5rem 0;
+  }
+  
+  .pricing .card-title {
+	margin: 0.5rem 0;
+	font-size: 0.9rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+  }
+  
+.price-header{
+	margin: 60px auto;
+	text-align: center;
+}
+
+  .pricing .card-price {
+	font-size: 3rem;
+	margin: 0;
+  }
+  
+  .pricing .card-price .period {
+	font-size: 0.8rem;
+  }
+  
+  .pricing ul li {
+	margin-bottom: 0.5rem;
+  }
+  
+  .pricing .text-muted {
+	opacity: 0.7;
+  }
+  
+  .pricing .btn {
+
+	font-size: 80%;
+	border-radius: 0%;
+	letter-spacing: .1rem;
+	font-weight: bold;
+	transition: all 0.2s;
+	background-color: #EFF0F7;
+	color: #3963AE;
+	border-color: #ffffff;
+  }
+
+  .card {
+	  border-radius: 0%;
+	  border: 0px;
+  }
+  
+  /* Hover Effects on Card */
+  
+  @media (min-width: 992px) {
+	.pricing .card:hover {
+	  margin-top: -.25rem;
+	  margin-bottom: .25rem;
+	  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+	}
+	.pricing .card:hover .btn {
+	  opacity: 1;
+	}
+  }
+
+  /* contacy us */
+  
+  .contact{
+	  padding: 80px 30px;
+  }
+
+  .contact .info {
+	width: 100%;
+	background: #fff;
+  }
+  
+  .contact .info i {
+	font-size: 20px;
+	color: #3963AE;
+	float: left;
+	width: 44px;
+	height: 44px;
+	background: #f0f0ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .contact .info h4 {
+	padding: 0 0 0 60px;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #3963AE;
+  }
+  
+  .contact .info p {
+	padding: 0 0 0 60px;
+	margin-bottom: 0;
+	font-size: 14px;
+	color: #3963AE;
+  }
+  
+  .contact .info .email, .contact .info .phone {
+	margin-top: 40px;
+  }
+  
+  .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+	background: #00263b;
+	color: #fff;
+  }
+  
+  .contact .php-email-form {
+	width: 100%;
+	background: #fff;
+  }
+  
+  .contact .php-email-form .form-group {
+	padding-bottom: 8px;
+  }
+  
+  .contact .php-email-form .validate {
+	display: none;
+	color: red;
+	margin: 0 0 15px 0;
+	font-weight: 400;
+	font-size: 13px;
+  }
+  
+  .contact .php-email-form .error-message {
+	display: none;
+	color: #fff;
+	background: #ed3c0d;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+  }
+  
+  .contact .php-email-form .sent-message {
+	display: none;
+	color: #fff;
+	background: #007B5E;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+  }
+  
+  .contact .php-email-form .loading {
+	display: none;
+	background: #fff;
+	text-align: center;
+	padding: 15px;
+  }
+  
+  .contact .php-email-form .loading:before {
+	content: "";
+	display: inline-block;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	margin: 0 10px -6px 0;
+	border: 3px solid #007B5E;
+	border-top-color: #eee;
+	-webkit-animation: animate-loading 1s linear infinite;
+	animation: animate-loading 1s linear infinite;
+  }
+  
+  .contact .php-email-form input, .contact .php-email-form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+  }
+  
+  .contact .php-email-form input {
+	height: 44px;
+  }
+  
+  .contact .php-email-form textarea {
+	padding: 10px 12px;
+  }
+  
+  .contact .php-email-form button[type="submit"] {
+	background: #035aa6;
+	border: 0;
+	padding: 10px 30px;
+	color: #fff;
+	transition: 0.4s;
+	border-radius: 0%;
+  }
+  
+  .contact .php-email-form button[type="submit"]:hover {
+	background: #00263b;
+	border-radius: 00%;
+  }
+  
+
+  .section-title h1 {
+	  text-align: center !important;
+	  margin-bottom: 50px;
+  }
+ 
+  
+  @-webkit-keyframes animate-loading {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes animate-loading {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  #sticky-footer {
+	flex-shrink: unset;
+  }
+
+  body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.chat-container {
+    position: fixed;
+    display: none;
+    width: 350px;
+    right: 35px;
+    height: 70%;
+    bottom: 140px;
+    background-color: white;
+    z-index: 9999 !important;
+    
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.041) 0 0 10px 7px,
+        rgba(46, 45, 45, 0.041) 0 0 10px 7px;
+	scrollbar-width: thin;
+    }
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: white;
+}
+
+#mainBtn {
+    position: fixed;
+    right: 35px;
+	bottom: 30px;
+	border: none;
+	border-radius: 50%;
+    width: auto;
+    font-size: 30px;
+	font-weight: 500;
+	padding: 8px 12px;
+	z-index: 99 !important;
+	background-color: #3963AE;
+	}
+	
+
+.bot_header {
+    background-color: #3F51B5 !important;
+    color: White;
+    height: 10%;
+    width: 100%;
+}
+
+
+/* .chatbot .head-tag{
+	margin-top: 1%;
+	margin-left: 3%;
+	height: auto;
+	padding : 3.5% 4% 0; 
+	font-size: 1.1rem;
+	margin-bottom: 10px;
+	
+	font-family: Verdana, Geneva, Tahoma, sans-serif
+} */
+
+
+@media (max-width:750px){
+	.main-heading .head-tag1{
+		width: 100%;
+	}
+	.align-items-center{
+		height: 110vh;
+	}
+.information .group{
+	float: right;
+	margin-right: 20%;
+}
+
+}
+
+@media (max-width:550px){
+.information .group{
+	margin-right: 15px;
+}
+
+}
+
+
+
+.service{
+	margin: 50px 0;
+	background-image: linear-gradient(to bottom right, #244150, #1e6486);
+	background-color: #244150;
+	margin: 0 auto;
+	padding: 100px 10px;
+}
+.service .chatbot{
+	padding: 60px 0;
+}
+.service .chatbot h1{
+	margin-bottom: 30px;
+	color: #eee;
+	
+}
+.service .chatbot h3{
+	margin-bottom: 30px;
+	color: #eee;
+	
+}
+
+
+.service .chatbot  p{
+	color: #eee;
+	line-height: 2;
+	font-family: 'Rubik', sans-serif;
+	letter-spacing: 0.07em;
+}
+
+
+/* #sticky-footer{
+	padding: 5px 0 20px;
+} */
+
+/* #sticky-footer h5{
+	color: #eee;
+} */
+
+#sticky-footer a{
+	font-size: 15px;
+}
+.social{
+	font-size: 23px;
+}
+.fa-facebook{
+	background-color: #eee;
+	color: #4d4e53;
+	padding:10px 15px;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 23px;
+}
+.fa-facebook:hover{
+	color: #3168df;
+}
+
+.fa-instagram{
+	background-color: #eee;
+	color: #4d4e53;
+	padding:10px 12px;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 23px;
+}
+.fa-instagram:hover{
+	color: #c41b4a;
+}
+
+.fa-linkedin{
+	background-color: #eee;
+	color: #4d4e53;
+	padding:10px 12px;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 23px;
+}
+.fa-linkedin:hover{
+	color: #1353dd;
+}
+
+.join{
+	padding:100px 0;
+	background: url('../assets/Images/back11.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: white;
+}
+
+.join-content .btn{
+	margin-top: 20px;
+	font-size: 1.2rem;
+}
+
+.user-msg {
+	overflow-y: auto;
+	height: 100px;
+}
+
+
+.anim-typewriter{
+	animation: typewriter 4s steps(40) 1s 1 normal both, 
+	blinkTextCursor 500s steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+	to{
+		width: 16rem;
+	}
+}
+
+@keyframes typewriter {
+	from {
+	border-right-color: chartreuse;
+	}
+	to{
+		border-right-color: transparent;
+	}
+}
+
+.customer-logo{
+	background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+/* 3F51B5 neela jyada dark*/
+/* 3963AE neela dark*/
+/* #6C777D */
+/* #007B5E */
+/* #EFF0F7 */
+/* #7BCBB7 hara rang*/
+@media (min-width:1200px){
+.what-bot .head-tag{
+	padding: 3%;
+}
+.what-bot{
+	margin: 0;
+}
+}
+@media (max-width:1000px){
+	.what-bot .head-tag{
+		padding: 0%;
+		margin: 0;
+		width: 650px;		
+	}
+	
+	#client1{
+		display: none;
+	}
+}
+
+.carousel-inner .col-3 img{
+	filter: grayscale(100%);
+}
+.carousel-inner .col-3 img:hover{
+	filter: grayscale(0%);
+}
+
+
+
+.integration button{
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding-left: 0;
+	padding: 2%;
+	margin-top: 2%;
+}
+.integration h1{
+	font-size: 2.8rem;
+	font-weight: bold;
+}
+.integration h4{
+	line-height: 1.6;
+	font-size: 1.6rem;
+	color: rgb(104, 99, 99);
+}
+
+.integration{
+	font-family: 'Rubik', sans-serif;
+	
+}
+
+.integration .row{
+	margin: 5% auto;
+	margin-bottom: 12%;
+	padding: 2%;
+}
+
+
+/* social-container At the bottom */
+
+.social-container{
+    padding-top: 26px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.19), 1px 1px 3px 0 #000;
+    text-align: center;
+    color: black;
+    margin-bottom: 5%;
+}
+
+
+@media (max-width : 550px){
+	.social-container{
+		margin: 3%;
+	}
+}
+
+.social-container img{
+    width: 50px;
+}
+.social-container .row{
+    padding:0 2%;
+}
+.icon-container{
+    padding: 2.5%;
+    color: darkgray;
+    font-weight: bold;
+}
+.icon-container:hover{
+   color: black;
+   font-weight: bold;
+}

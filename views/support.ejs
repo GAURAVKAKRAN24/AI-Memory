@@ -1,0 +1,61 @@
+<%- include ("partial/portalHeader.ejs") %>
+
+<div class="container my-5">
+
+    <h1 class="display-4 text-center"><i class="fas fa-question"></i>  Support</h1>
+    <p class="lead text-center mt-3 mb-5">You can send us query, feedback, bug or suggestion. We will start working on it as fast as possible.</p>
+   <form>
+       <div class="form-group row justify-content-around">
+           <div class="col-12 col-sm-4">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle Sinput_dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Request Type</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Feedback</a>
+                  <a class="dropdown-item" href="#">Bug</a>
+                  <a class="dropdown-item" href="#">Feature Request</a>
+                  <a class="dropdown-item" href="#">Account Question</a>
+                </div>
+              </div>                    
+            </div>
+
+            <div class="col-12 col-sm-4">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle Sinput_dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Urgency</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Low</a>
+                      <a class="dropdown-item" href="#">Medium</a>
+                      <a class="dropdown-item" href="#">High</a>
+                      <a class="dropdown-item" href="#">Critical</a>
+                    </div>
+                  </div>
+            </div>
+       </div>
+
+       <div class="form-group row justify-content-around">
+        <div class="col-10">
+             <input class="Sinput_form my-3 form-control" id="phone" name="phone" placeholder="Summary" type="text" required >
+         </div>
+        </div>
+
+
+        <div class="form-group row justify-content-around">
+            <div class="col-10">
+                 <input class="Sinput_form my-3 form-control" id="Agent Name" name="Agent Name" placeholder="Agent Name" type="text">
+             </div>
+        </div>
+
+        <div class="form-group row justify-content-around">
+            <div class="col-10">
+                <textarea class="my-3 my-3 form-control Saddress_area" id="publicinfo" name="publicinfo" cols="40" rows="4" placeholder="Description" required></textarea>
+            </div>
+        </div>
+       
+
+        <div class="form-group row justify-content-around"> 
+            <button name="submit" type="submit" class="btn btn-outline-secondary btn-lg">Send</button>
+        </div>
+   </form> 
+</div>
+
+
+<%- include ("partial/portalFooter.ejs") %>

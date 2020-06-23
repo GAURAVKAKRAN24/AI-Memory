@@ -1,0 +1,42 @@
+<%- include ("partial/portalHeader.ejs") %>
+
+<div class="container dropdown">
+  <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choose bot
+  </button>
+
+  
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <% user_data.botNames.forEach(function(botName, index) { %> 
+          <a class="dropdown-item" href="<%= botName %>"><%= botName %></a>
+      <% }); %>
+      </div>
+</div>
+
+        <div class="container mt-5 mb-3">
+          <h1 class="display-3 ml-3">History</h2>
+          <a class="lead ml-3">Chat users and there history</a>
+        </div><br />
+
+        <div class="container">
+          <ul class="list-group list-group-flush">
+
+            <% user_data.data.forEach(function(session, index) { %> 
+            <li class="list-group-item" data-toggle="collapse" href="#<%= session.session_id %>" aria-expanded="true"><%= index %> . <%= session.session_id %></li>
+            <div class="collapse anyclass ml-4" id="<%= session.session_id %>">
+              <ul class="list-group list-group-flush">
+                
+                <% session.chats.forEach(function(chat, index) { %>
+                <li class="list-group-item" >user: <%= chat.ques %>  </li>
+                <li class="list-group-item" >bot: <%= chat.ans %> </li>
+               <% }); %>
+              
+              </ul>
+            </div>
+            <% }); %>
+
+          </ul>
+        </div>
+
+<%- include ("partial/portalFooter.ejs") %>
+

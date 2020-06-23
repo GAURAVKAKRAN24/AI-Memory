@@ -1,0 +1,29 @@
+.paymentForm{
+   width: 50%;
+    margin-top: 100px;
+    padding: 7% 5%;
+    z-index: 1;
+}
+
+h6 {
+    display: inline-block;
+    padding-bottom: 1rem;
+
+}
+span {
+    position: absolute;
+    right: 2rem;
+}
+
+.smalls {
+    position: absolute;
+    bottom: 2px;
+    left: 1.5rem;
+}
+
+.razorpay-payment-button {
+    visibility: hidden;
+}
+#payment-block {
+    margin-top: 2%;
+}

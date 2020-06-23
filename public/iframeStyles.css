@@ -1,0 +1,33 @@
+body, html, .container-fluid {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.msg-send {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 9999999;
+    background-color: white;
+    height: 5%;
+}
+
+.bot-msg {
+    background-color: #E9ECEF;
+    border-radius: 0%;
+    max-width: 75%;
+}
+
+.user-msg {
+    color: white;
+    border-radius: 0%;
+    max-width: 75%;
+    background-color: #3F51B5;
+}
+
+.msg-container {
+    height: 95%;
+    overflow: auto;
+}
+

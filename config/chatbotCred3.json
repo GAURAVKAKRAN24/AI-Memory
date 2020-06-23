@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "akash-jahtes",
+  "private_key_id": "453c8f6bce012729ec54f828f29e883bc111987b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHUetSwrUWprwb\noxxB3dU9bmmZRj3PUDGnfzOSKZ7b6Atu4EYnK/qxYAwXfkvwglsD3D5dn02IRFat\njMBIK2Z0GC+AfwGo/3oaitJ1pugCA9hHTyU5kZVbe6dF5zj9FAPfrum10dtkpluY\nnoa+1Ef5y4LPo1JRFW5fOOzUsYs3Hzv2RJhV3WTbkl9LlBxwIcG/7gSPK5DLrJb4\nPKZe00TQFElCSDE7Y/0OIbPpUQP2lIirJuFO8mo0dPVrVdEmhsoNRqk2egwo+Ixn\nQrRjxZ5gFWPb063/1MRVGrhmhV7rqcVmqp8Ah0MRpCxn2eM/9nf4fvwwnC1WuyxB\n+JQfF6HjAgMBAAECggEAIr233lAJwO5+pdPLCegDepmRt92uOb7beKayHUjdNZUN\n9mHS8PScEJTZleCBa5Zz+no9crjW5XCyFi1oIj8uNwkMjP9OdE5e0ViprrXyo63M\nBYa+xlhnkYyeBdbWrTbJxdA4xUrC+kSxiG3Op0iF0A5dH6TNGe8YHo9VUkfgt35I\nSx0i8C/kcbpxB8ZHPuTDB7Mpa2R8XbI8t7MvF1DUdTB5/B37eK4JKlzAFIXUve5W\n960Casg9F3KIdIsKFEB0vu66g48mz+icni5kRDRAU+BVbns196J85+19961q0o10\nsQ1ZQO8dcygZXF0Eh7REJpVo1J0D68R0gMbxTUhCBQKBgQC7DrQpNxE0l7bzRvYC\nxWd7NPHF891k2cplOeC2X+QgcJoJv1NxIL+w8vSyzLItoJpwcCb6AlosqY6ykZ1a\n3/pEbtxchCI6WA4EMNMAsJ+XNj9JGBrCJceiZVXkBos2ux/zFWe4AegdHrOeg0SO\nPSS/8hy5E1Q5W1t525Kf0fbu5QKBgQC5MauAMbhUudnndDzcYsiMY1EgkkjIF/kG\nllKFx6jEvxMKxmG/0+ZHjQITetFgoOy+ul1gHfk69+m9PxNLMJu8qxrc5mnzQfrf\nYe2jJutSBuKRjQWybNLQFrp6NU73JP5ZetIMSjY4QY/8ASLZMhCcvTbHbHZX03lv\nwTepVWN5JwKBgAng4+jNTK5PWM0OMU3CKQ3bpO0ETOvXiJXB8bkP5VdFOw1Kulhe\nF2F74ypSHxLDyYQomBZZ63MyXSPXBs1WyLu2cxK7s6cLIWpdPbdqnHL63Wq5yCf6\noMlVuqx5H/768NwAhGK2TxDCn0++tO8iEX/FhHjNqYQB7BnKW7ru9rB1AoGBAIvU\n4TWuVQxEOC/3KG0PeXXnF76MNcA/uZwrrKuukdPcojgkinIZQWsNIWAsACQB3kA0\n34RPnXvU7PwjwCGp1i2i1Gmu4Jj4XMCGZLQoEs6gvDpCTOboHFVak/rqfXFG0XYm\nsqrs7fuUJW+WPAXbM4flppL1ZnXyC2NCdRC6lJ1JAoGAZphiBnYeGzw1ggE8SVzf\ntAakXIsOO2vosWeAIiAPW/D+COdfcI2cZIxvhl9ztTd51vcJQjY4rlowMenCq5RR\nxuQR80CbKMSBjqCGnuI+5lCEBm103zHVXFIA2xqrJ70xYF/l4ma3bSXnDARlVDIA\nfoztUaeH6xqytDHNAuvJZK8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-dxmtap@akash-jahtes.iam.gserviceaccount.com",
+  "client_id": "107952855812489611560",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-dxmtap%40akash-jahtes.iam.gserviceaccount.com"
+}

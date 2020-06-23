@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+
+
+
+});
+
+function getChat() {
+    fetch('/chats')
+        .then(res=>{
+            return res.json();
+        }).then(data=>{
+        console.log(data.data);
+    }).catch(err=>{
+       if(err) throw err;
+       console.log('Fetch API Success');
+    });
+}

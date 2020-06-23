@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- font awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Login</title>
+
+        <style>
+            body, html, .row {
+                height: 100%;
+                width: 100;
+            }
+
+            .form-control {
+                border-top: 0ch; border-left: 0ch; border-right: 0ch;
+                border-radius: 0ch;
+            }
+
+            .btn {
+                background-color: #3F51B5;
+                color: white;
+            }
+
+            .form-control:disabled, .navbar {
+                background-color: white !important;
+            }
+
+        </style>
+            
+      </head>
+
+    <body onload="disableSubmit()">
+
+        <div class="container mt-5 pt-1">
+            <div class="row  p-5"> 
+                <div class="col-12 col-md-7  d-inline-block p-4">
+                    <h1 class="display-4">Please fill the details below</h1>
+                    <p class="lead">It will take less then 30 seconds.</p>
+                    <form method="post" action="/demoForm">
+                        <div class="form-group">
+                            <label class="chosse plan ml-2 mt-5 lead">Choose Plan:</label>
+                            <select class="form-control" id="sel1" disabled>
+                              <option value="" selected disabled hidden>Demo</option>
+                            </select>
+                          </div>
+
+                          <div class="row mt-5">
+                            <div class="col-1 mt-auto">
+                                <i class="fa fa-building"></i>
+                            </div>
+                            <div class="col-11">
+                                <input type="text" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                          </div>
+
+                          <div class="row mt-5">
+                            <div class="col-1 mt-auto">
+                                <i class="fa fa-atlas"></i>
+                            </div>
+                            <div class="col-11">
+                                <input type="text" name="domainName" class="form-control" placeholder="Website Url" required>
+                            </div>
+                          </div>
+
+                          <div class="row mt-5">
+                              <button class="btn btn-primary ml-auto" type="submit">Proceed <i class="fa fa-arrow-right"></i></button>
+                          </div>
+
+                      </form>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            function disableSubmit() {
+             document.getElementById("submit").disabled = true;
+            }
+           
+             function activateButton(element) {
+           
+                 if(element.checked) {
+                   document.getElementById("submit").disabled = false;
+                  }
+                  else  {
+                   document.getElementById("submit").disabled = true;
+                 }
+           
+             }
+           </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
